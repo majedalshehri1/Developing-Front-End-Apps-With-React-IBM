@@ -27,8 +27,14 @@ const TodoList = () => {
             type="text"
             className="heading-input"
             placeholder="Enter heading"
+            value={headingInput} //which binds the value of the 'input' field to the 'headingInput' state variable.
+            onChange={(e) => {
+              setHeadingInput(e.target.value);
+            }} // Add onChange event handler to update headingInput state
           />
-          <button className="add-list-button">Add Heading</button>
+          <button className="add-list-button" onClick={handleAddTodo}>
+            Add Heading
+          </button>
         </div>
       </div>
       <div className="todo_main"></div>
