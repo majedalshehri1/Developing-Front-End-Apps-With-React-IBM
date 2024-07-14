@@ -10,7 +10,13 @@ const TodoList = () => {
   // Create an empty string representing the value entered into an input field to add a new list item within a todo item.
   const [listInput, setListInput] = useState("");
 
-  
+  // Create a function called HandleAddTodo which will run when the Add Address button is clicked.
+  const handleAddTodo = () => {
+    if (headingInput.trim() !== "") {
+      setTodos([...todos, { heading: headingInput, lists: [] }]);
+      setHeadingInput("");
+    }
+  };
 
   return (
     <>
