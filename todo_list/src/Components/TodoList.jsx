@@ -28,6 +28,13 @@ const TodoList = () => {
     }
   };
 
+  //when i delete the list create a function with name handleDeleteTodo
+  const handleDeleteTodo = (index) => {
+    const newTodos = [...todos];
+    newTodos.splice(index, 1);
+    setTodos(newTodos);
+  };
+
   return (
     <>
       <div className="todo-container">
