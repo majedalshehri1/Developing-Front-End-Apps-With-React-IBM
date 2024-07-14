@@ -18,6 +18,16 @@ const TodoList = () => {
     }
   };
 
+  // handleAddList() Function To Add Todo Items
+  const handleAddList = (index) => {
+    if (listInput.trim() !== "") {
+      const newTodos = [...todos];
+      newTodos[index].lists.push(listInput);
+      setTodos(newTodos);
+      setListInput("");
+    }
+  };
+
   return (
     <>
       <div className="todo-container">
@@ -60,7 +70,6 @@ const TodoList = () => {
                 Add List
               </button>
             </div>
-            
           </div>
         ))}
       </div>
