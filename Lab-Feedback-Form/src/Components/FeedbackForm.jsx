@@ -17,6 +17,30 @@ const FeedbackForm = () => {
     });
   };
 
+
+  // 1: Implement the form submission functionality by defining a handleSubmit function. This function should take an event parameter and prevent the default form submission.
+  // 2: Then, create a variable named confirmationMessage to capture user details.
+  // 3: Next, create another variable, isConfirmed, to confirm whether the user's details are correct.
+  // 4: If confirmed, log the form data to the console, display a thank you message to the user using the alert box, and clear the form fields by resetting the form data state.
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    const confirmationMessage = `
+      Name: ${formData.name}
+      Email: ${formData.email}
+      Feedback: ${formData.feedback}
+    `;
+    const isConfirmed = window.confirm(`Please confirm your details:\n\n${confirmationMessage}`);
+    if (isConfirmed) {
+      console.log('Submitting feedback:', formData);
+      setFormData({
+        name: '',
+        email: '',
+        feedback: ''
+      });
+      alert('Thank you for your valuable feedback!');
+    }
+  };
+
   return (
     <>
       <nav>Tell Us What You Think</nav>
