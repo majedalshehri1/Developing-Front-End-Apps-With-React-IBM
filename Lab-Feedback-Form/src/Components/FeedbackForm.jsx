@@ -8,7 +8,16 @@ const FeedbackForm = () => {
     email: '',
     feedback: ''
   });
-  
+  // Define a handleChange function to update the form data state as users input their information. 
+  // Create this after you have initialized variables with useState hook.
+  const handleChange = (event) => {
+    const { name, value } = event.target;
+    setFormData({
+      ...formData,
+      [name]: value
+    });
+  };
+
   return (
   <>
   <nav>
