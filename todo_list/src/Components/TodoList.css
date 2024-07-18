@@ -1,8 +1,10 @@
 /* TodoList.css */
-@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap');
-body{
-  background-color: #c8c8c85a;
+@import url("https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap");
+* {
   font-family: "Tajawal";
+}
+body {
+  background-color: #c8c8c85a;
 }
 .todo-container {
   max-width: 600px;
@@ -19,30 +21,36 @@ body{
   color: #333;
   margin-bottom: 20px;
 }
-.input-container{
+.input-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  
+}
+.add-list-button-heading {
+  border: none;
+  padding: 0.6rem 1.6rem;
+  border-radius: 0.3rem;
+  background-color: #49c679;
+  color: white;
+  font-size: 1.2rem;
+  transition: 0.5s;
+  cursor: pointer;
+}
+.add-list-button-heading:hover {
+  background-color: #19a14d;
 }
 .todo_main {
-  margin: 60px;
-  max-width: 100%;
-  display: flex;
   flex-wrap: wrap;
-  gap: 30px;
-  justify-content: center;
-  align-items: center;
+  width: 39rem;
+  margin: 50px auto;
 }
 
 .todo-card {
-  width: 300px; /* Adjust the width of the cards as needed */
   padding: 20px;
-  background-color: white;
-  border-radius: 8px;
-  margin-bottom: 20px;
-  border: 2px solid grey;
+  background-color: #f8f9fa;
+  border-radius: 3px;
+  border: 1px solid rgba(128, 128, 128, 0.177);
 }
 
 .heading-input {
@@ -54,40 +62,37 @@ body{
   border: 1px solid #ccc;
   border-radius: 4px;
   outline: none;
+  border: none;
 }
 
 .heading_todo {
   display: flex;
-  gap: 20px;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
+}
+.add_list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .heading_todo h3 {
-  width: 100%;
-  height: 40px;
+  border-radius: 0.2rem;
+  padding: 0.4rem;
   font-size: 20px;
-  text-align: center;
 }
-
-.delete-button {
-  background-color: #f44336;
-  color: #fff;
-  border: none;
-  padding: 7px 20px;
-  font-size: 14px;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  height: 40px;
-}
-
 .delete-button-heading {
-  height: 40px;
-  background-color: rgb(46, 163, 46);
-  color: #fff;
   border: none;
-  border-radius: 4px;
+  background-color: #f8f9fa;
+  cursor: pointer;
+}
+.delete-button-heading img {
+  background-color: rgb(252, 74, 74);
+  padding: 0.5rem;
+  border-radius: 0.3rem;
+}
+.delete-button-heading :hover {
+  background-color: #f91e1e;
 }
 
 .list-item {
@@ -97,30 +102,28 @@ body{
   justify-content: center;
 }
 
-.delete-button:hover {
-  background-color: #d32f2f;
-}
-
 .list-input {
-  width: 170px;
-  height: 25px;
-}
-
-.add-list-button {
   font-family: "Tajawal";
-  background-color: rgb(46, 163, 46);
-  color: #fff;
-  border: none;
-  padding: 7px 20px;
-  font-size: 15px;
+  width: calc(85% - 22px);
+  padding: 10px;
+  font-size: 16px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
   border-radius: 4px;
+  outline: none;
+  border: none;
+}
+.add-list-button {
+  border: none;
+  background-color: #f8f9fa;
   cursor: pointer;
-  transition: background-color 0.3s ease;
-  margin-left: 25px;
 }
-.todo_inside_list {
-  display: flex;
-  gap: 140px;
-  margin: 10px;
+.add-list-button img {
+  background-color: #49c679;
+  color: #fff;
+  padding: 0.5rem;
+  border-radius: 0.3rem;
 }
-
+.add-list-button :hover {
+  background-color: #35b867;
+}

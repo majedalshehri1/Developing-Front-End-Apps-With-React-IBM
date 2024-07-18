@@ -1,5 +1,7 @@
 import { useState } from "react";
 import "./TodoList.css";
+import trush from "../Icons/trush.svg";
+import addList from "../Icons/addList.svg";
 const TodoList = () => {
   // represent an array of todo items
   const [todos, setTodos] = useState([]);
@@ -49,7 +51,7 @@ const TodoList = () => {
               setHeadingInput(e.target.value);
             }} // Add onChange event handler to update headingInput state
           />
-          <button className="add-list-button" onClick={handleAddTodo}>
+          <button className="add-list-button-heading" onClick={handleAddTodo}>
             Add Heading
           </button>
         </div>
@@ -59,7 +61,13 @@ const TodoList = () => {
           <div key={index} className="todo-card">
             <div className="heading_todo">
               <h3>{todo.heading}</h3> {/* Display the heading here */}
-              <button className="delete-button-heading" onClick={handleDeleteTodo}>Delete Heading</button> {/* onClick event in the button with class name delete-button-heading */}
+              <button
+                className="delete-button-heading"
+                onClick={handleDeleteTodo}
+              >
+                <img src={trush} alt="trush" />
+              </button>{" "}
+              {/* onClick event in the button with class name delete-button-heading */}
             </div>
 
             <ul>
@@ -82,7 +90,7 @@ const TodoList = () => {
                 className="add-list-button"
                 onClick={() => handleAddList(index)}
               >
-                Add List
+                <img src={addList} alt="Add List" />
               </button>
             </div>
           </div>
